@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloUIWebView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6q-LQ-8ml">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dY7-mB-Q8N"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="A70-La-jeS">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="G6q-LQ-8ml" secondAttribute="trailing" id="50K-Z1-Urp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G6q-LQ-8ml" secondAttribute="bottom" id="DL3-CF-5g2"/>
+                            <constraint firstItem="A70-La-jeS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H9i-Ii-oAp"/>
+                            <constraint firstItem="G6q-LQ-8ml" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="O0D-cH-EgM"/>
+                            <constraint firstItem="G6q-LQ-8ml" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QD8-bW-ODW"/>
+                            <constraint firstItem="A70-La-jeS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WFT-CY-VUn"/>
+                            <constraint firstItem="G6q-LQ-8ml" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hyv-jG-u7v"/>
+                            <constraint firstAttribute="trailing" secondItem="G6q-LQ-8ml" secondAttribute="trailing" id="qCe-kA-Wrc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G6q-LQ-8ml" secondAttribute="bottom" id="qGQ-S4-het"/>
+                            <constraint firstItem="G6q-LQ-8ml" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vOu-HP-nTJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myActivityInicator" destination="A70-La-jeS" id="uno-9a-wHD"/>
+                        <outlet property="myWebView" destination="G6q-LQ-8ml" id="Co1-vr-sqn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="225" y="339"/>
+        </scene>
+    </scenes>
+</document>
